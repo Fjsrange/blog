@@ -1,6 +1,6 @@
 <template>
   <div>music</div>
-  <audio ref="audioRef" controls volumechange>
+  <audio ref="audioRef" controls volumechange style="width: 100%">
     <source :src="audioSource" type="audio/flac" />
   </audio>
   <button @click="playAudio">播放</button>

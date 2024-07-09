@@ -2,7 +2,7 @@
   <div class="home">
     <div class="user">
       <div class="home-user">
-        <div>
+        <div style="display: flex; align-items: center">
           <img src="@/assets/touxiang.jpeg" class="user-logo" />
           <div class="user-role">
             <div style="font-size: 20px; font-weight: bold">{{ name }}</div>
@@ -99,6 +99,7 @@ onUnmounted(() => {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+
   .user,
   .play {
     display: flex;
@@ -117,6 +118,12 @@ onUnmounted(() => {
         margin-right: 10px;
         width: 76px;
         border-radius: 50%;
+      }
+      .user-tag {
+        margin: 10px 0;
+      }
+      .user-call {
+        display: flex;
       }
     }
     .weather {

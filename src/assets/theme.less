@@ -1,0 +1,49 @@
+/* // 定义 light 主题 mixin
+.light-theme() {
+  @bgColor: #fff;
+  @textColor: #000;
+}
+
+// 定义 dark 主题 mixin
+.dark-theme() {
+  @bgColor: #000;
+  @textColor: #fff;
+}
+
+// 默认使用 light 主题
+.light-theme();
+
+// 定义 mixin 用于应用主题样式
+.useTheme(@bgColor, @textColor) {
+  .item {
+    width: 100px;
+    height: 100px;
+    background-color: @bgColor;
+    color: @textColor;
+  }
+}
+
+// 应用主题样式
+html[data-theme="light"] {
+  .useTheme(@bgColor: @bgColor, @textColor: @textColor); // 使用 light 主题的颜色变量
+}
+
+html[data-theme="dark"] {
+  .useTheme(@bgColor: @bgColor, @textColor: @textColor); // 使用 dark 主题的颜色变量
+} */
+
+html[data-theme="dark"] {
+  --text-color: #fff;
+  --bg1: #102128;
+  --bg2: #2d5567;
+}
+:root {
+  --text-color: #333;
+  --bg1: #c7ffdd;
+  --bg2: #fbd988;
+}
+
+/* // 全局样式
+.item {
+  .useTheme(@bgColor: @bgColor, @textColor: @textColor);
+} */
