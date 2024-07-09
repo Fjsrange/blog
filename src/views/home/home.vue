@@ -18,7 +18,7 @@
           <div class="tag-item">签名2.0</div>
         </div>
         <div class="user-call">
-          <div class="call-item">找到我的方式：</div>
+          <div class="call-item">联系我：</div>
           <div class="call-item">哔哩哔哩</div>
           <div class="call-item">github</div>
         </div>
@@ -124,6 +124,18 @@ onUnmounted(() => {
       }
       .user-call {
         display: flex;
+
+        .i {
+          margin-right: 20px;
+          cursor: pointer;
+          font-size: 18px;
+        }
+        .iconfont {
+          font-family: iconfont !important;
+          font-size: 16px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+        }
       }
     }
     .weather {
