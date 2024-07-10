@@ -2,26 +2,7 @@
   <div class="home">
     <div class="user">
       <div class="home-user">
-        <div style="display: flex; align-items: center">
-          <img src="@/assets/touxiang.jpeg" class="user-logo" />
-          <div class="user-role">
-            <div style="font-size: 20px; font-weight: bold">{{ name }}</div>
-            <div style="display: flex">
-              <div>我是</div>
-              <div style="padding: 0 10px">卢本伟</div>
-              <div>牛逼</div>
-            </div>
-          </div>
-        </div>
-        <div class="user-tag">
-          <div class="tag-item">{{ signature }}</div>
-          <div class="tag-item">签名2.0</div>
-        </div>
-        <div class="user-call">
-          <div class="call-item">联系我：</div>
-          <div class="call-item">哔哩哔哩</div>
-          <div class="call-item">github</div>
-        </div>
+        <User />
       </div>
       <div class="weather">欢迎</div>
     </div>
@@ -44,6 +25,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import Music from "./components/music.vue";
+import User from "./components/user.vue";
 
 let name = ref("路痴");
 let signature = ref("我是路痴行为艺术家");
@@ -100,13 +82,11 @@ onUnmounted(() => {
   justify-content: space-between;
   width: 100%;
 
-  .user,
-  .play {
+  .user {
     display: flex;
     max-width: 1400px;
-    margin: 0 auto;
     width: 100%;
-
+    margin: 0 auto;
     .home-user {
       width: 49%;
       height: 250px;
@@ -114,29 +94,6 @@ onUnmounted(() => {
       margin-right: 2%;
       border-radius: 12px;
       box-shadow: 0 0 8px 1px #ccc;
-      .user-logo {
-        margin-right: 10px;
-        width: 76px;
-        border-radius: 50%;
-      }
-      .user-tag {
-        margin: 10px 0;
-      }
-      .user-call {
-        display: flex;
-
-        .i {
-          margin-right: 20px;
-          cursor: pointer;
-          font-size: 18px;
-        }
-        .iconfont {
-          font-family: iconfont !important;
-          font-size: 16px;
-          font-style: normal;
-          -webkit-font-smoothing: antialiased;
-        }
-      }
     }
     .weather {
       display: flex;
@@ -150,9 +107,16 @@ onUnmounted(() => {
       background: no-repeat center / 100%;
     }
   }
+
+  .user,
+  .play {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
   .play {
     margin-top: 20px;
-
     .home-candle {
       display: flex;
       justify-content: center;
