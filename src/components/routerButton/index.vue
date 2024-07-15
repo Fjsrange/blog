@@ -2,8 +2,9 @@
 import { ref, reactive } from "vue";
 import { useTheme } from "@/hooks/useTheme";
 const { theme, toggleTheme } = useTheme();
+import { useRouter } from "vue-router";
 
-let showPopup = ref(false);
+const router = useRouter();
 
 // 按钮列表与是否展示底部内容
 const showBtn = ref([false, false, false]);
@@ -46,7 +47,7 @@ const goRouter = (item, index) => {
 
 // 跳转到首页
 function goHome() {
-  this.$router.push("/");
+  router.push({ name: "home" });
 }
 </script>
 
@@ -66,7 +67,7 @@ function goHome() {
         <span class="hasMargin">文章列表</span>
         <div class="popup">
           <div class="popup-item" v-for="(chil, i) in item.children" :key="i">
-            <div>
+            <div @click="goRouter(chil, index)">
               <i>📕</i>
               <span>{{ chil.name }}</span>
             </div>
@@ -171,6 +172,7 @@ function goHome() {
 .switch {
   padding: 5px;
   transition: 0.3s ease-in-out;
+  transition: opacity 0.5s ease;
   width: 120px;
   height: 50px;
   border-radius: 50px;
