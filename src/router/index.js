@@ -3,26 +3,38 @@ import {
   createWebHashHistory,
   createWebHistory,
 } from "vue-router";
+import { generateRoutesFn } from "./router";
+
+const pages = import.meta.glob("../views/**/page.js", {
+  eager: true,
+  import: "default",
+});
+const comps = import.meta.glob("../views/**/index.vue");
+const generateRoutes = generateRoutesFn(pages, comps); // 生成路由
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: () => import("../views/home/home.vue"),
+    meta: {
+      title: "首页",
+    },
   },
   {
     path: "/articleList/:type",
     name: "articleList",
     component: () => import("@/views/articleList/index.vue"),
+    meta: {
+      title: "列表",
+    },
   },
-  // {
-  //   path: "/about",
-  //   name: "about",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (About.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import("../views/AboutView.vue"),
-  // },
+  {
+    path: "/detail",
+    name: "detail",
+    component: () => import("@/views/detail/index.vue"),
+    children: [...generateRoutes],
+  },
 ];
 
 const router = createRouter({

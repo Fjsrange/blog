@@ -47,7 +47,7 @@ const goRouter = (item, index) => {
 
 // 跳转到首页
 function goHome() {
-  router.push({ name: "home" });
+  router.push({ path: "/" });
 }
 </script>
 
