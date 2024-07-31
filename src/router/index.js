@@ -10,7 +10,7 @@ const pages = import.meta.glob("../views/**/page.js", {
   import: "default",
 });
 const comps = import.meta.glob("../views/**/index.vue");
-const generateRoutes = generateRoutesFn(pages, comps); // 生成路由
+export const generateRoutes = generateRoutesFn(pages, comps); // 生成路由
 
 const routes = [
   {

@@ -40,6 +40,8 @@ const showItemFn = (index, type) => {
 
 // 点击跳转项目内路由
 const goRouter = (item, index) => {
+  console.log(item, index);
+
   if (!item.base || !item.path) return;
   router.push(`${item.base}${item.path}`);
   showItemFn(index, false);
