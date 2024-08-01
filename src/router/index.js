@@ -4,6 +4,7 @@ import {
   createWebHistory,
 } from "vue-router";
 import { generateRoutesFn } from "./router";
+import { beforeEachCallback, afterEackCallback } from "./guards.js";
 
 const pages = import.meta.glob("../views/**/page.js", {
   eager: true,
@@ -41,5 +42,9 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 });
+
+router.beforeEach(beforeEachCallback);
+
+router.afterEach(afterEackCallback);
 
 export default router;

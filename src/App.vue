@@ -8,16 +8,20 @@ import routerButton from "@/components/routerButton/index.vue";
 <template>
   <div class="App">
     <routerButton />
-    <RouterView />
+    <RouterView class="content" />
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .App {
   height: 100vh;
   /* background: linear-gradient(to bottom, var(--bg1), var(--bg2));
   color: var(--text-color); */
   background: linear-gradient(to bottom, var(--bg1), var(--bg2));
   color: var(--text-color);
+
+  .content {
+    padding: 20px;
+  }
 }
 </style>
