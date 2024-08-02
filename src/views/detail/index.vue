@@ -29,5 +29,6 @@ onMounted(() => {
   border-radius: 20px;
   box-shadow: 0 0 3px;
   background-color: #fff;
+  color: #000;
 }
 </style>
