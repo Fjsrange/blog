@@ -117,12 +117,19 @@ function goHome() {
     border-radius: 20px;
     cursor: pointer;
     &::before {
+      // content: "";
+      // position: absolute;
+      // top: 60px;
+      // left: 0;
+      // width: 100%;
+      // height: 10px;
       content: "";
       position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      height: 10px;
+      bottom: -10px;
+      left: 44.7%;
+      width: 11%;
+      height: 18px;
+      top: 6%;
       background-color: transparent;
     }
     &::after {
