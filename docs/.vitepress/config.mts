@@ -1,6 +1,9 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  // 部署到 GitHub Pages 时的基础路径，仓库名为 blog
+  base: "/blog/",
+
   // 站点标题
   title: "我的博客",
   // 站点描述
