@@ -44,6 +44,9 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          # 自动在仓库中启用 GitHub Pages（设为 true 可跳过手动启用）
+          enablement: true
 
       - name: Install dependencies
         run: pnpm install
