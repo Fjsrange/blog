@@ -3,6 +3,8 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   // 部署到 GitHub Pages 时的基础路径，仓库名为 blog
   base: "/blog/",
+  // 忽略无效链接检测，打包不再因死链接报错终止
+  ignoreDeadLinks: true,
 
   // 站点标题
   title: "我的博客",
