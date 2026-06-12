@@ -20,10 +20,39 @@ export default defineConfig({
       {
         text: "前端知识",
         items: [
-          { text: "基础", link: "/frontend/basics/html/" },
-          { text: "框架", link: "/frontend/frameworks/vue2/" },
-          { text: "进阶", link: "/frontend/advanced/charts/" },
-          { text: "概念与实战", link: "/frontend/concepts/" },
+          {
+            text: "基础",
+            items: [
+              { text: "HTML", link: "/frontend/basics/html/" },
+              { text: "CSS", link: "/frontend/basics/css/" },
+              { text: "JavaScript", link: "/frontend/basics/javascript/" },
+            ],
+          },
+          {
+            text: "框架",
+            items: [
+              { text: "Vue2", link: "/frontend/frameworks/vue2/" },
+              { text: "Vue3", link: "/frontend/frameworks/vue3/" },
+              { text: "React", link: "/frontend/frameworks/react/" },
+            ],
+          },
+          {
+            text: "进阶",
+            items: [
+              { text: "图表可视化", link: "/frontend/advanced/charts/" },
+              { text: "高级进阶", link: "/frontend/advanced/senior/" },
+              { text: "模块化工程", link: "/frontend/advanced/modules/" },
+              { text: "ES6学习", link: "/frontend/advanced/ES6/" },
+            ],
+          },
+          {
+            text: "概念与实战",
+            items: [
+              { text: "核心概念", link: "/frontend/concepts/" },
+              { text: "知识体系", link: "/frontend/concepts/roadmap" },
+              { text: "实战训练", link: "/frontend/concepts/practice/" },
+            ],
+          },
         ],
       },
       { text: "归档", link: "/archives/" },
@@ -144,6 +173,13 @@ export default defineConfig({
             { text: "Monorepo 管理", link: "/frontend/advanced/modules/monorepo" },
           ],
         },
+        {
+          text: "ES6学习",
+          items: [
+            { text: "ES6 基础入门", link: "/frontend/advanced/ES6/" },
+            { text: "ES6 进阶", link: "/frontend/advanced/ES6/advanced" },
+          ],
+        }
       ],
 
       "/frontend/concepts/": [
